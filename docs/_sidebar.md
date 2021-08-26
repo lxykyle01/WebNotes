@@ -1,7 +1,2 @@
-* [Home](/) 
-* [My Projects](/Project/)
-* [My Life](/Life/)
-* [English Study](/EnglishStudy/)
-* [Clips](/Clips/)
-* [About Me](/AboutMe/)
-
+* [首页](/)
+* [算法](zh-cn/suanfa)

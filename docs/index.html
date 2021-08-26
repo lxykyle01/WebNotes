@@ -6,61 +6,66 @@
   <title>Document</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-  <!-- Custom theme styles -->
   <style>
     :root {
-      /* Reduce the font size */
-      --base-font-size: 20px;
-      --cover-button-background: #7fd5f7c4;
-      --cover-button-primary-background: #7fd5f7c4;
-      --cover-button-border: 1px solid #7fd5f7c4;
-      --cover-button-primary-border: 1px solid #7fd5f7c4;
-      --cover-button-color: rgba(255, 249, 249, 0.712);
-      --cover-button-primary-color: rgba(255, 255, 255, 0.753);
-      --cover-background-color: ;
-      --cover-background-image: url(http://ww1.sinaimg.cn/large/005Ou0zdgy1ghvpyj508wg30go09eu1f.gif);
-      --cover-blockquote-color: #fff;
-      --docsifytabs-border-color: #ededed;
-      --docsifytabs-tab-highlight-color: rgba(80, 165, 245, 0.788);
-      --link-text-decoration-color: rgba(80, 165, 245, 0.788);
-      --sidebar-nav-link-text-decoration-color: rgba(80, 165, 245, 0.788);
+      --font-size-xxxl: 2.2rem;
+      --font-size-xxl: 1.8rem;
+      --font-size-xl: 1.6rem;
+      --font-size-l: 1.6rem;
+      --font-size-m: 1.5rem;
+      --font-size-s: 1.4rem;
+      --font-size-xs: 1.3rem;
+      --code-font-size: calc(var(--font-size-xs) * 0.80);
+      --base-font-family: Georgia,
+        -apple-system,
+        'Nimbus Roman No9 L',
+        'PingFang SC',
+        'Hiragino Sans GB',
+        'Noto Serif SC',
+        'Microsoft Yahei',
+        'WenQuanYi Micro Hei',
+        'ST Heiti',
+        sans-serif;
+      --base-font-size: 16px;
+      --base-background-color: #b8eebf28;
+      --mark-background: #ffecb3;
+      --mark-color: ;
+      --code-inline-background: #a9c6b63f;
+      --content-max-width: 70rem;
+      --heading-font-family: 'Josefin Sans', -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+      --heading-h1-color: #5c7a6c;
+      --heading-h2-color: #5c7a6c;
+      --heading-h3-color: #5c7a6c;
+      --heading-h4-color: #5c7a6c;
+      --heading-h5-color: #5c7a6c;
+      --heading-h6-color: #5c7a6c;
+      --base-color: #5c7a6c;
+      --selection-color: #5c7a6c;
+      --code-theme-background: #a9c6b638;
+      --sidebar-border-color: #b8eebfe3;
+      --sidebar-background: #b8eebf28;
     }
   </style>
 </head>
 
 <body>
   <div id="app"></div>
-
   <script>
     window.$docsify = {
-      name: 'My Site',
-      repo: 'https://github.com/lxykyle01/WebNotes',
-      maxLevel: 4,
-      coverpage: true,
+      name: '',
+      repo: '',
       loadSidebar: true,
-
-      loadNavbar: true,
-      autoHeader: true,
-      subMaxLevel: 3,
-      themeable: {
-
-      }
+      subMaxLevel: 4,
+      themeColor: '#5c7a6c'
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <link rel="stylesheet" href="path/to/prismjs-theme.css">
-  <!-- CDN files for docsify-katex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
 </body>
 
 </html>

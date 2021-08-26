@@ -1,2 +1,0 @@
-# Some of My Projects
-
