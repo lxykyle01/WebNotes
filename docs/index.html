@@ -13,10 +13,10 @@
       --font-size-xxxl: 2.2rem;
       --font-size-xxl: 1.8rem;
       --font-size-xl: 1.6rem;
-      --font-size-l: 1.6rem;
-      --font-size-m: 1.5rem;
-      --font-size-s: 1.4rem;
-      --font-size-xs: 1.3rem;
+      --font-size-l: 1.5rem;
+      --font-size-m: 1.4rem;
+      --font-size-s: 1.2rem;
+      --font-size-xs: 1.2rem;
       --code-font-size: calc(var(--font-size-xs) * 0.80);
       --base-font-family: Georgia,
         -apple-system,
@@ -29,23 +29,37 @@
         'ST Heiti',
         sans-serif;
       --base-font-size: 16px;
-      --base-background-color: #b8eebf28;
-      --mark-background: #ffecb3;
+      --base-background-color: rgb(255, 255, 255);
+      --mark-background: #ecae442c;
       --mark-color: ;
-      --code-inline-background: #a9c6b63f;
+      --code-inline-background: #ecae442c;
       --content-max-width: 70rem;
       --heading-font-family: 'Josefin Sans', -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-      --heading-h1-color: #5c7a6c;
-      --heading-h2-color: #5c7a6c;
-      --heading-h3-color: #5c7a6c;
-      --heading-h4-color: #5c7a6c;
-      --heading-h5-color: #5c7a6c;
-      --heading-h6-color: #5c7a6c;
-      --base-color: #5c7a6c;
-      --selection-color: #5c7a6c;
-      --code-theme-background: #a9c6b638;
-      --sidebar-border-color: #b8eebfe3;
-      --sidebar-background: #b8eebf28;
+      --heading-h1-color: #BE2F29;
+      --heading-h2-color: #BE2F29;
+      --heading-h3-color: #BE2F29;
+      --heading-h4-color: #BE2F29;
+      --heading-h5-color: #BE2F29;
+      --heading-h6-color: #BE2F29;
+      --base-color: #1A2C42;
+      --selection-color: #0C1115;
+      --code-theme-background: #ecae440e;
+      --sidebar-border-color: #ecae442c;
+      --sidebar-background: #ecae440e;
+      --sidebar-name-font-weight: 600;
+      --sidebar-nav-link-font-weight: 500;
+      --sidebar-nav-strong-font-weight: 600;
+      --sidebar-nav-strong-color: #BE2F29;
+      --sidebar-nav-strong-font-size: 1.0rem;
+      --sidebar-nav-strong-border-color: #BE2F29;
+      --sidebar-nav-link-color: #BE2F29;
+      --sidebar-name-color: #BE2F29;
+      --sidebar-nav-link-color--active: #1A2C42;
+
+
+
+
+
     }
   </style>
 </head>
@@ -58,14 +72,15 @@
       repo: '',
       loadSidebar: true,
       subMaxLevel: 4,
-      themeColor: '#5c7a6c'
+      themeColor: '#5c7a6c',
+      name: '学习笔记'
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 </body>
 
 </html>
