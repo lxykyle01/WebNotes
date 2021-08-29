@@ -59,7 +59,7 @@
         $obj.on('click', function () {
             if (not_clicked === true) {
                 not_clicked = false;
-                $('html, body').animate({scrollTop: 0}, speed, function () {
+                $('html, body').animate({ scrollTop: 0 }, speed, function () {
                     not_clicked = true;
                 });
             }
@@ -83,8 +83,8 @@
             entryAnimation: 'fade',
             goupSpeed: 'slow',
             hideUnderWidth: 500,
-            containerColor: '#42B983',
-            arrowColor: '#fff',
+            containerColor: '#ecae442c',
+            arrowColor: '#BE2F29',
             title: '',
             titleAsText: false,
             titleAsTextClass: 'goup-text',
@@ -126,7 +126,7 @@
             params.containerColor = '#000';
         }
         if (!checkColor.test(params.arrowColor)) {
-            params.arrowColor = '#fff';
+            params.arrowColor = '#BE2F29';
         }
 
         if (params.title === '') {
@@ -208,7 +208,7 @@
             if ($window.outerWidth() <= params.hideUnderWidth) {
                 isHidden = true;
                 do_animation($container, 'hide', params.entryAnimation);
-                if (typeof($textContainer) !== 'undefined') {
+                if (typeof ($textContainer) !== 'undefined') {
                     do_animation($textContainer, 'hide', params.entryAnimation);
                 }
             } else {
@@ -220,7 +220,7 @@
         if ($window.outerWidth() <= params.hideUnderWidth) {
             isHidden = true;
             $container.hide();
-            if (typeof($textContainer) !== 'undefined')
+            if (typeof ($textContainer) !== 'undefined')
                 $textContainer.hide();
         }
 
@@ -230,32 +230,32 @@
             $window.scroll(function () {
                 if ($window.scrollTop() >= params.trigger && !isHidden) {
                     do_animation($container, 'show', params.entryAnimation);
-                    if (typeof($textContainer) !== 'undefined') {
+                    if (typeof ($textContainer) !== 'undefined') {
                         do_animation($textContainer, 'show', params.entryAnimation);
                     }
                 } else {
                     do_animation($container, 'hide', params.entryAnimation);
-                    if (typeof($textContainer) !== 'undefined') {
+                    if (typeof ($textContainer) !== 'undefined') {
                         do_animation($textContainer, 'hide', params.entryAnimation);
                     }
                 }
             });
         } else {
             do_animation($container, 'show', params.entryAnimation);
-            if (typeof($textContainer) !== 'undefined') {
+            if (typeof ($textContainer) !== 'undefined') {
                 do_animation($textContainer, 'show', params.entryAnimation);
             }
         }
         /* If i load the page and the scroll is over the trigger, i don't have immediately the event 'scroll' */
         if ($window.scrollTop() >= params.trigger && !isHidden) {
             do_animation($container, 'show', params.entryAnimation);
-            if (typeof($textContainer) !== 'undefined') {
+            if (typeof ($textContainer) !== 'undefined') {
                 do_animation($textContainer, 'show', params.entryAnimation);
             }
         }
 
         click_event($container, params.goupSpeed);
-        if (typeof($textContainer) !== 'undefined') {
+        if (typeof ($textContainer) !== 'undefined') {
             click_event($textContainer, params.goupSpeed);
         }
     };
