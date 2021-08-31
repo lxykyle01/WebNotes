@@ -83,8 +83,8 @@
             entryAnimation: 'fade',
             goupSpeed: 'slow',
             hideUnderWidth: 500,
-            containerColor: '#ECAE442C',
-            arrowColor: '#BE2F29',
+            containerColor: '#8C827B',
+            arrowColor: '#DAD0BF',
             title: '',
             titleAsText: false,
             titleAsTextClass: 'goup-text',
@@ -126,7 +126,7 @@
             params.containerColor = '#000';
         }
         if (!checkColor.test(params.arrowColor)) {
-            params.arrowColor = '#BE2F29';
+            params.arrowColor = '#DAD0BF';
         }
 
         if (params.title === '') {

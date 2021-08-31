@@ -3,14 +3,15 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>一本笔记</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/wugenqiang/StaticRepo/images/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <style>
     :root {
-      --docsify-example-panels-document-width: 65%;
+      --docsify-example-panels-document-width: 80%;
       --docsify-example-panels-left-panel-width: 55%;
       --docsify-example-panels-right-panel-width: 45%;
       --font-size-xxxl: 2.2rem;
@@ -32,43 +33,54 @@
         'ST Heiti',
         sans-serif;
       --base-font-size: 16px;
-      --base-background-color: rgb(255, 255, 255);
-      --mark-background: #ecae442c;
-      --mark-color: ;
-      --code-inline-background: #ecae442c;
-      --content-max-width: 30rem;
+      --base-background-color: #D1C4AF;
+      --mark-background: #8C827B;
+      --mark-color: #FFF1D5;
+      --code-inline-background: #8C827B;
+      --code-inline-color: #FFF1D5;
+      --content-max-width: 80rem;
       --heading-font-family: 'Josefin Sans', -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-      --heading-h1-color: #BE2F29;
-      --heading-h2-color: #BE2F29;
-      --heading-h3-color: #BE2F29;
-      --heading-h4-color: #BE2F29;
-      --heading-h5-color: #BE2F29;
-      --heading-h6-color: #BE2F29;
-      --base-color: #1A2C42;
-      --selection-color: #1A2C42;
-      --code-theme-background: #ecae440e;
-      --sidebar-border-color: #ecae442c;
-      --sidebar-background: #ecae440e;
+      --heading-h1-color: #585356;
+      --heading-h2-color: #786F69;
+      --heading-h3-color: #786F69;
+      --heading-h4-color: #786F69;
+      --heading-h5-color: #786F69;
+      --heading-h6-color: #786F69;
+      --base-color: #645D5B;
+      --selection-color: #645D5B;
+      --code-theme-background: #DAD0BF;
+      --sidebar-border-color: #8C827B;
+      --sidebar-background: #8C827B;
       --sidebar-name-font-weight: 600;
       --sidebar-nav-link-font-weight: 500;
       --sidebar-nav-strong-font-weight: 600;
-      --sidebar-nav-strong-color: #BE2F29;
+      --sidebar-nav-strong-color: #FFF1D5;
       --sidebar-nav-strong-font-size: 1.0rem;
-      --sidebar-nav-strong-border-color: #BE2F29;
-      --sidebar-nav-link-color: #BE2F29;
-      --sidebar-name-color: #BE2F29;
-      --sidebar-nav-link-color--active: #1A2C42;
-      --zoomimage-overlay-background: rgba(0, 0, 0, 0.875);
+      --sidebar-nav-strong-border-color: #be9f77;
+      --sidebar-nav-link-color: #FFF1D5;
+      --sidebar-name-color: #FFF1D5;
+      --sidebar-nav-link-color--active: #D6BAB6;
+      --sidebar-width: 14rem;
+      --zoomimage-overlay-background: #d1c4afd2;
+      --copycode-background: #9E9484;
+      --copycode-color: #fff;
+      --docsify-example-panels-left-panel-width: 40%;
+
     }
 
     .floating-cat {
 
+      width: 450;
+      height: 200;
       box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 
 
     }
 
-    .floating-cat img {}
+    .floating-cat img {
+      width: 450;
+      height: 200;
+    }
   </style>
 </head>
 
@@ -76,18 +88,34 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
+      copyCode: {
+        buttonText: '🙈点击复制',
+        errorText: '❌错误',
+        successText: '⭕️复制成功！'
+      },
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
         crossChapter: true,
         crossChapterText: true,
       },
-      name: '',
+      search: {
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '😒 找不到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//添加搜索框
+      //logo: '/_media/latte.svg width="70" height="70"',
       repo: '',
       loadSidebar: true,
-      subMaxLevel: 4,
-      themeColor: '#1A2C42',
-      name: '🥭学习笔记'
+      subMaxLevel: 3,
+      themeColor: '#645D5B',
+      name: "<p href='#/'><img src='/_media/latte.svg' width=40 height=20>咖啡时间</p>",
+      //name: "<p>咖啡时间<div href='#/'><img src='/_media/latte.svg' width=90 height=90></div></p>",
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+
     }
   </script>
   <!-- Docsify v4 -->
@@ -106,13 +134,37 @@
       });
     });
   </script>
-
+  <!-- 全局搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 添加python代码高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <!-- 主题文本 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+  <!-- emoji插件-->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 下一页 -->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 图片放大 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- 分栏 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-example-panels"></script>
+  <!-- 复制代码按钮 -->
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
+  <!-- latex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <!-- 回到顶部按钮 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/sweetalert.min.js"></script>
+  <!-- mouse click -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/click_heart.js"></script>
+
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+  <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+
 </body>
+
 
 </html>
